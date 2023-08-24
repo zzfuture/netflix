@@ -16,5 +16,19 @@
                 "texto": "Change or cancel your plan anytime"
             }
         ]
-    }
+    },
+    "card":[
+        {
+            "tier": "Basic",
+            "precio": "$6.99"
+        },
+        {
+            "tier": "Standard",
+            "precio": "$15.49"
+        },
+        {
+            "tier": "Premium",
+            "precio": "$19.99"
+        }
+    ]
 }
