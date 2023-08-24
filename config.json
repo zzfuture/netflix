@@ -1,6 +1,10 @@
 {
-    "section": {
-        "titulo": "XD",
+    "navbar": {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/799px-Netflix_2015_logo.svg.png?20190206123158"
+    },
+    "header": {
+        "steps": "STEP 1 OF 3",
+        "titulo": "Choose the plan that’s right for you",
         "parrafo": [
             {
                 "texto": "Watch all you want. Ad-free"
