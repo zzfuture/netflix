@@ -84,15 +84,92 @@ body {
 }
 
 
-/* cambios iker */
+/*! cambios iker */
 
 .netflixlogo{
-  width: 14vw;
-  min-width: 80px;
-  max-width: 140px;
+  width: 160px;
 }
-
+.navb {
+  padding: 10px 60px;
+}
+.navb img {
+  padding-bottom: 10px;
+}
+.sign {
+  padding-bottom: 15px;
+}
+.sign a {
+  font-size: 18px;
+  font-weight: bold;
+}
 .py-3 {
   max-width: 100vw;
   padding: 0px;
+}
+.step {
+  color: #333333;
+  font-size: 13px;
+  font-weight: bold;
+}
+main {
+  padding: 20px var(--layout-container-side-padding) 60px;
+}
+#precios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.colpalida {
+  width: 120px;
+  height: 120px;
+  background-color: #ef6b71;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  padding: 8px;
+  font-size: 19px;
+}
+.collast {
+  width: 120px;
+  height: 120px;
+  background-color: #e50914;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  padding: 8px;
+  font-size: 19px;
+}
+.cajas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 77px;
+  padding-left: 23vw;
+
+}
+.table-responsive {
+  --bs-body-bg: none;
+}
+.table-responsive th {
+  color:#737373;
+}
+.text-start{
+  color: #333333 !important;;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 951px){
+.col{
+  height: 120px;
+  width: 120px;
+}
 }
