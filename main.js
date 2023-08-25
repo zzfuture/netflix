@@ -80,7 +80,6 @@ let construirTabla = async (file) => {
   let tableArray = (res.plans.table);
   tableArray.pop();
   seleccion.insertAdjacentHTML("beforeend", /*html*/`
-  <thead>
     <tr>
       <th style="width: 34%;"></th>
       ${tableArray.map(value => /*html*/`

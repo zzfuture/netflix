@@ -32,7 +32,6 @@
         }
     ],
     "plans": {
-        "title": "Compare plans",
         "table": [
             {
                 "tier": "Basic",
