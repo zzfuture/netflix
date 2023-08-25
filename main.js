@@ -143,7 +143,7 @@ let footer = async (file) => {
     let seleccion = document.querySelector("#footer");
     seleccion.insertAdjacentHTML("beforeend", /*html*/`
     <p>${res.footer.questions}</p>
-    <div class="d-flex flex-wrap ps-0 gap-3">
+    <div class="d-flex ps-0 gap-1">
       <ul class="ps-0">
         <p><a class="text-decoration-none text-dark" href="#">${res.footer.btn1}<ap></ap></p>
         <p><a class="text-decoration-none text-dark" href="#">${res.footer.btn2}<ap></ap></p>
