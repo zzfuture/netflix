@@ -123,3 +123,42 @@ let construirTabla = async (file) => {
 }
 construirTabla("config");
 
+let preFooter = async (file) => {
+  let peticion = await fetch(`${file}.json`);
+  let res = await peticion.json();
+  let seleccion = document.querySelector("#prefooter");
+  seleccion.insertAdjacentHTML("beforeend", /*html*/`
+  <p class="fs-6">HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our <a href="https://help.netflix.com/legal/termsofuse">Terms of Use</a> for more details.
+          Only people who live with you may use your account. Watch on 4 different devices at the same time witz Premium, 2 with Standard and 1 with Basic.
+  </p>
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-danger py-3 fs-4" type="button">Next</button>
+  </div>
+  `)
+}
+preFooter("config");
+
+let footer = async (file) => {
+  let peticion = await fetch(`${file}.json`);
+    let res = await peticion.json();
+    let seleccion = document.querySelector("#footer");
+    seleccion.insertAdjacentHTML("beforeend", /*html*/`
+    <p>${res.footer.questions}</p>
+    <div class="d-flex flex-wrap ps-0 gap-3">
+      <ul class="ps-0">
+        <p><a class="text-decoration-none text-dark" href="#">${res.footer.btn1}<ap></ap></p>
+        <p><a class="text-decoration-none text-dark" href="#">${res.footer.btn2}<ap></ap></p>
+      </ul>
+      <ul>
+        <p><a class="text-decoration-none text-dark" href="#">${res.footer.btn3}</a></p>
+        <p><a class="text-decoration-none text-dark" href="#">${res.footer.btn4}</a></p>
+      </ul>
+      <ul>
+        <p><a class="text-decoration-none text-dark" href="#">${res.footer.btn5}</a></p>
+        <p><a class="text-decoration-none text-dark" href="#">${res.footer.btn6}</a></p>
+      </ul>
+      <p><a class="text-decoration-none text-dark" href="#">${res.footer.btn7}</a></p>
+    </div>
+    `);
+}
+footer("config");

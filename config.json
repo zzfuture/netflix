@@ -53,5 +53,15 @@
                 "resolution": "4K+HDR"
             }
         ]
+    },
+    "footer": {
+        "questions": "Questions? Call 01 800 917 1563",
+        "btn1": "FAQ",
+        "btn2": "Privacy",
+        "btn3": "Help Center",
+        "btn4": "Cookie Preferences",
+        "btn5": "Netflix Shop",
+        "btn6": "Corporate Information",
+        "btn7": "Terms of Use"
     }
 }
