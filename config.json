@@ -30,5 +30,28 @@
             "tier": "Premium",
             "precio": "$19.99"
         }
-    ]
+    ],
+    "plans": {
+        "title": "Compare plans",
+        "table": [
+            {
+                "tier": "Basic",
+                "price": "$6.99",
+                "quality": "Good",
+                "resolution": "720p"
+            },
+            {
+                "tier": "Standard",
+                "price": "$15.49",
+                "quality": "Better",
+                "resolution": "1080p"
+            },
+            {
+                "tier": "Premium",
+                "price": "$19.99",
+                "quality": "Best",
+                "resolution": "4K+HDR"
+            }
+        ]
+    }
 }

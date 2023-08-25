@@ -71,39 +71,55 @@ let construirCard = async (file) => {
 }
 construirCard("config");
 
-/*
-<div class="col">
-  <div class="card mb-4 rounded-3">
-    <div class="card-header py-3">
-      <h4 class="my-0 fw-normal">Basic</h4>
-    </div>
-    <div class="card-body">
-      <h1 class="card-title pricing-card-title">$6.99<small class="text-body-secondary fw-light">/mo</small>
-      </h1>
-    </div>
-  </div>
-</div>
-<div class="col">
-  <div class="card mb-4 rounded-3">
-    <div class="card-header py-3">
-      <h4 class="my-0 fw-normal">Standard</h4>
-    </div>
-    <div class="card-body">
-      <h1 class="card-title pricing-card-title">$15.49<small class="text-body-secondary fw-light">/mo</small>
-      </h1>
-    </div>
-  </div>
-</div>
-<div class="col">
-  <div class="card mb-4 border-danger">
-    <div class="card-header py-3 text-bg-danger">
-      <h4 class="my-0 fw-normal">Premium</h4>
-    </div>
-    <div class="card-body">
-      <h1 class="card-title pricing-card-title">$19.99<small class="text-body-secondary fw-light">/mo</small>
-      </h1>
-    </div>
-  </div>
-</div>
+let construirTabla = async (file) => {
+  let peticion = await fetch(`${file}.json`);
+  let res = await peticion.json();
+  let seleccion = document.querySelector("#table");
+  let porcentaje = 70/(res.plans.table.length);
+  let lastTable = (res.plans.table[res.plans.table.length - 1]);
+  let tableArray = (res.plans.table);
+  tableArray.pop();
+  seleccion.insertAdjacentHTML("beforeend", /*html*/`
+  <thead>
+    <tr>
+      <th style="width: 34%;"></th>
+      ${tableArray.map(value => /*html*/`
+      <th style="width: ${porcentaje}%;">${value.tier}</th>
+      `).join('')}
+      <th class="text-danger" style="width: ${porcentaje}%;">${lastTable.tier}</th>
+    </tr>
+  </thead>
+  <tbody>
+  <th scope="row" class="text-start">Monthly price</th>
+  ${tableArray.map(value => /*html*/`
+    <td>${value.price}</td>
+  `).join('')}
+      <td class="text-danger">${lastTable.price}</td>
+  </tbody>
+  <tbody>
+  <th scope="row" class="text-start">Video quality</th>
+  ${tableArray.map(value => /*html*/`
+    <td>${value.quality}</td>
+  `).join('')}
+      <td class="text-danger">${lastTable.quality}</td>
+  </tbody>
+  <tbody>
+  <th scope="row" class="text-start">Resolution</th>
+  ${tableArray.map(value => /*html*/`
+    <td>${value.resolution}</td>
+  `).join('')}
+      <td class="text-danger">${lastTable.resolution}</td>
+  </tbody>
+  <tbody>
+  <th scope="row" class="text-start">Watch on your TV, computer, mobile phone and tablet</th>
+  ${tableArray.map(value => /*html*/`
+    <td><svg class="bi text-center" width="24" height="24">
+    <use xlink:href="#check" />
+  </svg></td>
+  `).join('')}
+    <td class="text-danger"><svg class="bi text-center" width="24" height="24"><use xlink:href="#check" /></svg></td>
+  </tbody>
+  `);
+}
+construirTabla("config");
 
-*/
